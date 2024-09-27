@@ -1,3 +1,8 @@
+# Setting up the project in your local machine
+
+Just type 'npm install' in your terminal. And then type "npm run start" and it will run
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
