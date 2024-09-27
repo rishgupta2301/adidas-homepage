@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap'); /* Strong font */
+
+.quotes-section {
+  background-color: #1a1a1a; /* Dark background for contrast */
+  color: #ffffff; /* White text for readability */
+  padding: 40px 20px; /* Padding for the section */
+  text-align: center; /* Center text */
+}
+
+.quotes-section h2 {
+  font-size: 36px; /* Larger heading size */
+  font-family: 'Roboto', sans-serif; /* Strong font */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+.quotes-container {
+  display: flex; /* Flexbox for layout */
+  flex-wrap: wrap; /* Wrap quotes on small screens */
+  justify-content: center; /* Center quotes */
+}
+
+.quote-card {
+  background-color: #333333; /* Card background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the card */
+  margin: 10px; /* Space between cards */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  flex: 0 1 calc(30% - 20px); /* Responsive card sizing */
+  transition: transform 0.3s ease; /* Animation on hover */
+}
+
+.quote-card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.quote-text {
+  font-size: 24px; /* Quote text size */
+  font-weight: bold; /* Bold font */
+  margin-bottom: 10px; /* Space below quote text */
+}
+
+.quote-author {
+  font-size: 18px; /* Author text size */
+  font-style: italic; /* Italic style for author */
+}
+
+@media (max-width: 768px) {
+  .quote-card {
+    flex: 0 1 calc(45% - 20px); /* Adjust card size for mobile */
+  }
+
+  .quotes-section h2 {
+    font-size: 28px; /* Smaller heading size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .quote-card {
+    flex: 0 1 calc(100% - 20px); /* Stack cards on small screens */
+  }
+}

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+.carousel {
+  position: relative;
+  padding: 4cqw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #f9f9f9; 
+}
+
+.carousel-title {
+    /* align-items: center;
+    justify-content: center; */
+  font-size: 36px; 
+  font-family: 'Montserrat', sans-serif; 
+  color: #000; 
+  margin-bottom: 20px; 
+}
+
+.carousel-track {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.carousel-image {
+  min-width: 300px; /* Minimum width for images */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  margin: 0 10px; /* Margin for spacing */
+  transition: transform 0.3s ease;
+}
+
+.carousel-image:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.carousel-button {
+  position: absolute;
+  top: 63%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+  font-size: 24px;
+}
+
+.carousel-button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.carousel-button.left {
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    padding: 10px;
+  }
+  .carousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .carousel-image {
+    min-width: 200px; /* Smaller images on mobile */
+  }
+
+  .carousel-title {
+    font-size: 28px; /* Adjust title size for mobile */
+  }
+}

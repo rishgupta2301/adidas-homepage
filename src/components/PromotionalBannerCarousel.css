@@ -1,0 +1,38 @@
+.promotional-banner {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .carousel {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  
+  .banner-image {
+    width: 100%;
+    display: flex;
+    height: auto;
+    margin-right: 10px;
+    max-width: 600px; /* Limit max width */
+  }
+  
+  .banner-image:last-child {
+    margin-right: 0; /* No margin for the last image */
+  }
+  
+  @media (max-width: 768px) {
+    .carousel {
+        display: flex;
+        flex-direction: column;
+        overflow-x: auto;
+      }
+    .promotional-banner {
+      padding: 20px 10px; /* Less padding for mobile */
+    }
+  
+    .banner-image {
+      max-width: 100%; /* Full width for mobile */
+    }
+  }
+  
