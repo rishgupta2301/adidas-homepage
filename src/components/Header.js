@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CartIcon from './CartIcon';
 import './Header.css';
 
 function Header() {
@@ -8,20 +9,39 @@ function Header() {
       <div className="header-container">
         <div className="logo">
           <Link to="/">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHlr_vtUeKCrIAeXCnRwgq61q3XiAA_m9W-A&s" alt="Adidas Clone Logo" />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHlr_vtUeKCrIAeXCnRwgq61q3XiAA_m9W-A&s"
+              alt="Adidas Clone Logo"
+            />
           </Link>
         </div>
         <nav className="header-nav">
           <ul>
-            <li><Link to="/">Men</Link></li>
-            <li><Link to="/">Women</Link></li>
-            <li><Link to="/">Kids</Link></li>
-            <li><Link to="/">Sale</Link></li>
+            <li>
+              <Link to="/">Men</Link>
+            </li>
+            <li>
+              <Link to="/">Women</Link>
+            </li>
+            <li>
+              <Link to="/">Kids</Link>
+            </li>
+            <li>
+              <Link to="/">Sale</Link>
+            </li>
           </ul>
         </nav>
         <div className="search-bar">
-          <input type="text" placeholder="Search products..." />
+          <input
+            type="text"
+            placeholder="Search products..."
+            className="search-input"
+          />
+          <button className="search-button">
+            <i className="fas fa-search"></i> {/* FontAwesome Search Icon */}
+          </button>
         </div>
+        <CartIcon />
       </div>
     </header>
   );

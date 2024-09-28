@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../redux/cartSlice';
 import './ProductCard.css';
 
 function ProductCard({ product }) {
   const [isHovered, setIsHovered] = useState(false);
+
+  const dispatch = useDispatch();
+
+  const addProductToCart = () => {
+    dispatch(addToCart(product));
+  };
 
   return (
     <div
@@ -14,7 +22,7 @@ function ProductCard({ product }) {
       <div className="product-info">
         <h3>{product.name}</h3>
         <p>${product.price}</p>
-        <button>Add to Cart</button>
+        <button onClick={addProductToCart}>Add to Cart</button>
       </div>
     </div>
   );

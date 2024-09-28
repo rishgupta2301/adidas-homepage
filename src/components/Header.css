@@ -1,45 +1,103 @@
-.header {
+/* Header container */
+.header-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: #fff;
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .header-container {
-    display: flex;
     justify-content: space-between;
-    width: 100%;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
+  /* Logo styling */
   .logo img {
     height: 50px;
   }
   
+  /* Navigation menu */
   .header-nav ul {
+    list-style: none;
     display: flex;
-    list-style-type: none;
-  }
-  
-  .header-nav ul li {
-    margin: 0 15px;
+    gap: 20px;
   }
   
   .header-nav ul li a {
     text-decoration: none;
     color: #333;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: color 0.3s;
   }
   
   .header-nav ul li a:hover {
-    color: #000;
+    color: #0071e3; /* Hover color */
   }
   
-  .search-bar input {
-    padding: 5px;
-    width: 200px;
+  /* Search bar container */
+  .search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* Search input field */
+  .search-input {
+    width: 100%;
+    padding: 10px 15px;
     border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+    outline: none;
+  }
+  
+  /* Focused input styling */
+  .search-input:focus {
+    border-color: #0071e3;
+    box-shadow: 0 0 5px rgba(0, 113, 227, 0.5);
+  }
+  
+  /* Search button */
+  .search-button {
+    position: absolute;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #0071e3;
+    transition: color 0.3s ease;
+  }
+  
+  /* FontAwesome Icon inside the button */
+  .search-button .fas {
+    font-size: 16px;
+    color: #0071e3;
+  }
+  
+  .search-button:hover .fas {
+    color: #005bb5;
+  }
+  
+  /* Cart icon alignment */
+  .cart-icon {
+    margin-left: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .header-container {
+      flex-wrap: wrap;
+    }
+  
+    .header-nav ul {
+      justify-content: center;
+      margin: 10px 0;
+    }
+  
+    .search-bar {
+      width: 100%;
+    }
   }
   

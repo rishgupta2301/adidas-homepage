@@ -3,6 +3,7 @@
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease;
+    position: relative;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
@@ -33,11 +34,22 @@
   .product-card button:hover {
     background-color: #333;
   }
+  .product-card:hover {
+    transform: scale(1.05);
+  }
   
   .product-card.hovered {
     transform: scale(1.05);
   }
   
+  .product-info button {
+    transition: background-color 0.2s ease;
+  }
+  
+  .product-info button:hover {
+    background-color: #ff6f61;
+  }
+
   @media (max-width: 768px) {
     .product-card {
       padding: 15px; /* Adjust padding for mobile */
