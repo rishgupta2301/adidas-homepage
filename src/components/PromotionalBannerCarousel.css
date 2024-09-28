@@ -14,11 +14,11 @@
     display: flex;
     height: auto;
     margin-right: 10px;
-    max-width: 600px; /* Limit max width */
+    max-width: 600px;
   }
   
   .banner-image:last-child {
-    margin-right: 0; /* No margin for the last image */
+    margin-right: 0; 
   }
   
   @media (max-width: 768px) {
@@ -28,11 +28,11 @@
         overflow-x: auto;
       }
     .promotional-banner {
-      padding: 20px 10px; /* Less padding for mobile */
+      padding: 20px 10px; 
     }
   
     .banner-image {
-      max-width: 100%; /* Full width for mobile */
+      max-width: 100%; 
     }
   }
   

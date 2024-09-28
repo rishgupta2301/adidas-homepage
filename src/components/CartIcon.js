@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import './CartIcon.css';  // Styling for cart icon and badge
+import './CartIcon.css';  
 
 function CartIcon() {
   const totalQuantity = useSelector(state => state.cart.totalQuantity);

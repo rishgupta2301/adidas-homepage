@@ -16,22 +16,22 @@
   }
   
   .product-card {
-    flex: 0 0 auto; /* Prevents shrinking */
-    scroll-snap-align: center; /* Aligns to center */
-    margin-right: 20px; /* Space between cards */
+    flex: 0 0 auto; 
+    scroll-snap-align: center; 
+    margin-right: 20px; 
   }
   
   .product-card:last-child {
-    margin-right: 0; /* No margin for the last item */
+    margin-right: 0; 
   }
   
   @media (max-width: 768px) {
     .featured-products {
-      padding: 20px 10px; /* Less padding for mobile */
+      padding: 20px 10px; 
     }
   
     .product-card {
-      min-width: 150px; /* Smaller cards for mobile */
+      min-width: 150px; 
     }
   }
   

@@ -1,4 +1,4 @@
-/* Header container */
+
 .header-container {
     display: flex;
     align-items: center;
@@ -8,12 +8,10 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  /* Logo styling */
   .logo img {
     height: 50px;
   }
   
-  /* Navigation menu */
   .header-nav ul {
     list-style: none;
     display: flex;
@@ -30,10 +28,10 @@
   }
   
   .header-nav ul li a:hover {
-    color: #0071e3; /* Hover color */
+    color: #0071e3; 
   }
   
-  /* Search bar container */
+
   .search-bar {
     display: flex;
     align-items: center;
@@ -42,7 +40,7 @@
     max-width: 400px;
   }
   
-  /* Search input field */
+
   .search-input {
     width: 100%;
     padding: 10px 15px;
@@ -53,13 +51,13 @@
     outline: none;
   }
   
-  /* Focused input styling */
+
   .search-input:focus {
     border-color: #0071e3;
     box-shadow: 0 0 5px rgba(0, 113, 227, 0.5);
   }
   
-  /* Search button */
+
   .search-button {
     position: absolute;
     right: 10px;
@@ -71,7 +69,7 @@
     transition: color 0.3s ease;
   }
   
-  /* FontAwesome Icon inside the button */
+
   .search-button .fas {
     font-size: 16px;
     color: #0071e3;
@@ -81,7 +79,7 @@
     color: #005bb5;
   }
   
-  /* Cart icon alignment */
+
   .cart-icon {
     margin-left: 20px;
   }

@@ -26,16 +26,16 @@
 }
 
 .carousel-image {
-  min-width: 300px; /* Minimum width for images */
+  min-width: 300px; 
   height: auto;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  margin: 0 10px; /* Margin for spacing */
+  margin: 0 10px;
   transition: transform 0.3s ease;
 }
 
 .carousel-image:hover {
-  transform: scale(1.05); /* Zoom effect on hover */
+  transform: scale(1.05); 
 }
 
 .carousel-button {
@@ -75,10 +75,10 @@
   }
 
   .carousel-image {
-    min-width: 200px; /* Smaller images on mobile */
+    min-width: 200px;
   }
 
   .carousel-title {
-    font-size: 28px; /* Adjust title size for mobile */
+    font-size: 28px;
   }
 }

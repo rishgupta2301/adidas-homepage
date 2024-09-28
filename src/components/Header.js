@@ -38,7 +38,7 @@ function Header() {
             className="search-input"
           />
           <button className="search-button">
-            <i className="fas fa-search"></i> {/* FontAwesome Search Icon */}
+            <i className="fas fa-search"></i> 
           </button>
         </div>
         <CartIcon />

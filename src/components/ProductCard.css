@@ -52,11 +52,11 @@
 
   @media (max-width: 768px) {
     .product-card {
-      padding: 15px; /* Adjust padding for mobile */
+      padding: 15px; 
     }
   
     .product-card .product-info h3 {
-      font-size: 14px; /* Smaller font size for mobile */
+      font-size: 14px; 
     }
   }
   
