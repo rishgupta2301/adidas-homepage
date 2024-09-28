@@ -8,7 +8,7 @@
 }
 
 .quotes-section h2 {
-  font-size: 36px; /* Larger heading size */
+  font-size: 30px; /* Larger heading size */
   font-family: 'Roboto', sans-serif; /* Strong font */
   margin-bottom: 20px; /* Space below the heading */
 }
@@ -34,7 +34,7 @@
 }
 
 .quote-text {
-  font-size: 24px; /* Quote text size */
+  font-size: 18px; /* Quote text size */
   font-weight: bold; /* Bold font */
   margin-bottom: 10px; /* Space below quote text */
 }
