@@ -1,37 +1,67 @@
 .featured-products {
-    padding: 40px 20px;
-    text-align: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Enable snapping */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling for mobile devices */
+}
+
+.carousel-track {
+  display: flex;
+}
+
+.product-card {
+  flex: 0 0 auto; /* Prevent shrinking or growing */
+  scroll-snap-align: center; /* Ensure each product snaps into the center */
+  margin-right: 20px;
+  transition: transform 0.3s ease-in-out; /* Smooth animation for snapping */
+}
+
+.product-card img {
+  width: 100%; /* Ensure the image fits the card */
+  height: auto;
+  border-radius: 8px; /* Rounded corners */
+}
+
+.product-card:last-child {
+  margin-right: 0; /* Remove the margin on the last card */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .featured-products {
+      padding: 20px 10px;
   }
-  
+
   .carousel {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+      overflow-x: auto; /* Horizontal scroll for small screens */
+      padding: 0 10px;
   }
-  
-  .carousel-track {
-    display: flex;
-  }
-  
+
   .product-card {
-    flex: 0 0 auto; 
-    scroll-snap-align: center; 
-    margin-right: 20px; 
+      min-width: 150px; /* Smaller card size for mobile */
+      flex: 0 0 auto;
+      margin-right: 15px; /* Adjust margin between cards */
   }
-  
+
   .product-card:last-child {
-    margin-right: 0; 
+      margin-right: 0;
   }
-  
-  @media (max-width: 768px) {
-    .featured-products {
-      padding: 20px 10px; 
-    }
-  
-    .product-card {
-      min-width: 150px; 
-    }
+}
+
+/* Styling for even smaller devices (like phones) */
+@media (max-width: 480px) {
+  .product-card {
+      min-width: 120px; /* Even smaller width for small phones */
+      margin-right: 10px;
   }
-  
+
+  .featured-products {
+      padding: 10px 5px;
+  }
+}
