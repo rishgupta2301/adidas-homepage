@@ -85,9 +85,9 @@
 
 /* Cart Icon Styling */
 .cart-icon {
-  margin-left: 20px;
   display: flex;
   align-items: center;
+  margin-left: 20px;
 }
 
 /* Media Queries for Responsiveness */
@@ -118,7 +118,8 @@
 @media (max-width: 768px) {
   .header-container {
     justify-content: center;
-    flex-direction: column; /* Stack elements vertically on mobile */
+    flex-wrap: wrap;
+    padding: 10px;
   }
 
   .logo img {
@@ -136,10 +137,25 @@
     font-size: 14px; /* Smaller font size on mobile */
   }
 
+  /* Search bar and cart icon on the same row */
+  .search-bar,
+  .cart-icon {
+    flex: 1;
+    max-width: 50%; /* Both search bar and cart icon take up 50% width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .search-bar {
-    width: 100%;
-    max-width: none; /* Remove max-width, allow full width */
-    padding: 0 20px;
+    max-width: 70%;
+    margin: 0;
+  }
+
+  .cart-icon {
+    max-width: 30%;
+    margin: 0;
+    justify-content: flex-end; /* Right-align the cart icon */
   }
 
   .search-input {
@@ -150,21 +166,16 @@
   .search-button {
     font-size: 14px; /* Smaller search icon */
   }
-
-  .cart-icon {
-    margin-left: 0;
-    padding: 10px 0; /* Center align cart icon on its own line */
-  }
 }
 
 /* Small Mobile Devices (max-width: 480px) */
 @media (max-width: 480px) {
   .header-container {
-    padding: 10px;
+    padding: 5px;
   }
 
   .logo img {
-    height: 35px; /* Even smaller logo for small devices */
+    height: 35px; /* Smaller logo for small devices */
   }
 
   .header-nav ul {
@@ -176,21 +187,33 @@
     padding: 3px 5px; /* Minimal padding */
   }
 
+  /* Search bar and cart icon on the same row */
+  .search-bar,
+  .cart-icon {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .search-bar {
-    padding: 0 10px;
+    max-width: 70%; /* Allow search bar to be 70% */
+    margin: 0;
+  }
+
+  .cart-icon {
+    max-width: 30%; /* Cart icon 30% */
+    margin: 0;
+    justify-content: flex-end;
   }
 
   .search-input {
-    font-size: 11px;
+    font-size: 11px; /* Smaller input field */
     padding: 7px 10px; /* Small padding for the input */
   }
 
   .search-button {
     font-size: 12px;
-  }
-
-  .cart-icon {
-    margin-left: 0;
-    padding: 5px 0;
   }
 }
