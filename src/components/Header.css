@@ -1,101 +1,196 @@
-
+/* General Header Container */
 .header-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* Allows wrapping on small screens */
+}
+
+/* Logo styling */
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* Navigation Menu */
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.header-nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 10px;
+  transition: color 0.3s;
+}
+
+.header-nav ul li a:hover {
+  color: #0071e3;
+}
+
+/* Search Bar Container */
+.search-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 10px 0;
+}
+
+/* Search Input Styling */
+.search-input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+/* Focused Input Styling */
+.search-input:focus {
+  border-color: #0071e3;
+  box-shadow: 0 0 5px rgba(0, 113, 227, 0.5);
+}
+
+/* Search Button Styling */
+.search-button {
+  position: absolute;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #0071e3;
+  transition: color 0.3s ease;
+}
+
+.search-button .fas {
+  font-size: 16px;
+  color: #0071e3;
+}
+
+.search-button:hover .fas {
+  color: #005bb5;
+}
+
+/* Cart Icon Styling */
+.cart-icon {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and Medium Screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .header-container {
     justify-content: space-between;
-    padding: 15px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
   }
-  
-  .logo img {
-    height: 50px;
-  }
-  
+
   .header-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+    gap: 15px; /* Reduced gap between menu items for tablets */
   }
-  
-  .header-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 5px 10px;
-    transition: color 0.3s;
-  }
-  
-  .header-nav ul li a:hover {
-    color: #0071e3; 
-  }
-  
 
   .search-bar {
-    display: flex;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    max-width: 400px;
+    width: 100%; /* Full width search bar for tablets */
+    max-width: 300px; /* Reduced max-width for tablets */
   }
-  
 
   .search-input {
-    width: 100%;
-    padding: 10px 15px;
-    border: 1px solid #ddd;
-    border-radius: 25px;
-    font-size: 14px;
-    transition: border-color 0.3s ease;
-    outline: none;
+    font-size: 13px;
+    padding: 8px 12px;
   }
-  
+}
 
-  .search-input:focus {
-    border-color: #0071e3;
-    box-shadow: 0 0 5px rgba(0, 113, 227, 0.5);
+/* Mobile Phones (max-width: 768px) */
+@media (max-width: 768px) {
+  .header-container {
+    justify-content: center;
+    flex-direction: column; /* Stack elements vertically on mobile */
   }
-  
+
+  .logo img {
+    height: 40px; /* Reduced logo size */
+  }
+
+  .header-nav ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px; /* Smaller gap between nav items */
+  }
+
+  .header-nav ul li a {
+    font-size: 14px; /* Smaller font size on mobile */
+  }
+
+  .search-bar {
+    width: 100%;
+    max-width: none; /* Remove max-width, allow full width */
+    padding: 0 20px;
+  }
+
+  .search-input {
+    font-size: 12px; /* Smaller input font size */
+    padding: 8px 12px;
+  }
 
   .search-button {
-    position: absolute;
-    right: 10px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    color: #0071e3;
-    transition: color 0.3s ease;
+    font-size: 14px; /* Smaller search icon */
   }
-  
-
-  .search-button .fas {
-    font-size: 16px;
-    color: #0071e3;
-  }
-  
-  .search-button:hover .fas {
-    color: #005bb5;
-  }
-  
 
   .cart-icon {
-    margin-left: 20px;
+    margin-left: 0;
+    padding: 10px 0; /* Center align cart icon on its own line */
   }
-  
-  @media (max-width: 768px) {
-    .header-container {
-      flex-wrap: wrap;
-    }
-  
-    .header-nav ul {
-      justify-content: center;
-      margin: 10px 0;
-    }
-  
-    .search-bar {
-      width: 100%;
-    }
+}
+
+/* Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .header-container {
+    padding: 10px;
   }
-  
+
+  .logo img {
+    height: 35px; /* Even smaller logo for small devices */
+  }
+
+  .header-nav ul {
+    gap: 5px; /* Minimal gap between items */
+  }
+
+  .header-nav ul li a {
+    font-size: 12px;
+    padding: 3px 5px; /* Minimal padding */
+  }
+
+  .search-bar {
+    padding: 0 10px;
+  }
+
+  .search-input {
+    font-size: 11px;
+    padding: 7px 10px; /* Small padding for the input */
+  }
+
+  .search-button {
+    font-size: 12px;
+  }
+
+  .cart-icon {
+    margin-left: 0;
+    padding: 5px 0;
+  }
+}
